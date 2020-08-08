@@ -1,5 +1,5 @@
 [scm_server]
-<host>
+host1.example.com
 
 [db_server]
 <host>
