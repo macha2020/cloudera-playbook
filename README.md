@@ -1,4 +1,4 @@
-# Cloudera Playbook 
+# Cloudera Deployment
 
 An Ansible Playbook that installs the Cloudera stack on RHEL/CentOS
 
