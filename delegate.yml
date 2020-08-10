@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: make direcotry
+    file:
+      path: "/home/cloud_user/.ssh"
+      state: directory
+  - name: create empty file
+    file:
+      path: "/home/cloud_user/.ssh/authorized_keys"
+      state: touch
+  - name: put pubkey
+    lineinfile:
+      path: "/home/cloud_user/.ssh/authorized_keys"
+      line: "{{ pubkey }}"
+  - name: add cloud_user in sudoers file 
+    lineinfile:
+      path: "/etc/sudoers"
+      line: 'cloud_user        ALL=(ALL)       NOPASSWD: ALL'
+
