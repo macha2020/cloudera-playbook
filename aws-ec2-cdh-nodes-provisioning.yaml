@@ -3,14 +3,8 @@ Description: 'This template creates cdh servers'
 Parameters:
   AMIID:
     Type: String
-    Description: Enter AMIID  for creating new EC2 instance.
-  AZ:
-    Type: String
-    Description: Enter Availability zone for new EC2 instance  
-  SubnetID:
-    Type: String
-    Description: Enter SubnetID for creating new EC2 instance for private CDH cluster
-  
+    Description: Enter AMIID  for creating new EC2 instance (region us-east-1)
+    Default: ami-098f16afa9edf40be 
   InstanceType:
     Type: String
     Default: t2.micro
@@ -22,12 +16,22 @@ Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
     Type: 'AWS::EC2::KeyPair::KeyName'
-    ConstraintDescription: must be the name of an existing EC2 KeyPair.
+    ConstraintDescription: must be the name of an existing EC2 KeyPair
+  Role:
+    Description: Role of the EC2 instance in cdh cluster
+    Type: String
+    AllowedValues:
+      - db_server
+      - krb5_server
+      - scm_server
+      - master_servers
+      - worker_servers
+      - edge_servers
 Resources:
   CDHSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
-      GroupDescription: Enable traffic over port all ports
+      GroupDescription: Enable traffic for mentioned ports 
       SecurityGroupIngress:
         - IpProtocol: -1
           FromPort: -1
@@ -37,9 +41,15 @@ Resources:
     Type: 'AWS::EC2::Instance'
     Properties:
       ImageId: !Ref AMIID
-      AvailabilityZone: !Ref AZ
       InstanceType: !Ref InstanceType
       KeyName: !Ref KeyName
+      Tags:
+      - Key: Role
+        Value:
+          Ref: Role
+      - Key: main_group
+        Value: cdh_servers
+          
       SecurityGroups:
         - !Ref CDHSecurityGroup
    
