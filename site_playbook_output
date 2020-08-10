@@ -1,0 +1,85 @@
+[cloud_user@mrciti7c cloudera-playbook]$ ansible-playbook site.yml
+
+PLAY [Configure Cloudera Manager Repository] ************************************************************************************************************************************************
+
+TASK [Gathering Facts] **********************************************************************************************************************************************************************
+fatal: [ec2-100-25-166-39.compute-1.amazonaws.com]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/libexec/platform-python"}, "failed": true, "module_stderr": "Shared connection to ec2-100-25-166-39.compute-1.amazonaws.com closed.\r\n", "module_stdout": ">>> /etc/sudoers: syntax error near line 121 <<<\r\nsudo: parse error in /etc/sudoers near line 121\r\nsudo: no valid sudoers sources found, quitting\r\nsudo: unable to initialize policy plugin\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: setup\n"}
+ok: [ec2-52-91-122-210.compute-1.amazonaws.com]
+ok: [ec2-54-197-117-147.compute-1.amazonaws.com]
+ok: [ec2-100-26-165-36.compute-1.amazonaws.com]
+ok: [ec2-54-210-123-120.compute-1.amazonaws.com]
+ok: [ec2-52-204-70-189.compute-1.amazonaws.com]
+ok: [ec2-54-173-75-170.compute-1.amazonaws.com]
+ok: [ec2-100-25-26-98.compute-1.amazonaws.com]
+ok: [ec2-100-25-139-89.compute-1.amazonaws.com]
+ok: [ec2-100-24-206-190.compute-1.amazonaws.com]
+ok: [ec2-100-26-236-211.compute-1.amazonaws.com]
+
+TASK [cm_repo : Add Cloudera Manager yum repository] ****************************************************************************************************************************************
+ok: [ec2-52-204-70-189.compute-1.amazonaws.com]
+ok: [ec2-52-91-122-210.compute-1.amazonaws.com]
+ok: [ec2-54-197-117-147.compute-1.amazonaws.com]
+ok: [ec2-100-26-165-36.compute-1.amazonaws.com]
+ok: [ec2-54-210-123-120.compute-1.amazonaws.com]
+ok: [ec2-54-173-75-170.compute-1.amazonaws.com]
+ok: [ec2-100-25-139-89.compute-1.amazonaws.com]
+ok: [ec2-100-25-26-98.compute-1.amazonaws.com]
+changed: [ec2-100-24-206-190.compute-1.amazonaws.com]
+ok: [ec2-100-26-236-211.compute-1.amazonaws.com]
+
+PLAY [Install rngd] *************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] **********************************************************************************************************************************************************************
+ok: [ec2-52-91-122-210.compute-1.amazonaws.com]
+ok: [ec2-52-204-70-189.compute-1.amazonaws.com]
+ok: [ec2-54-197-117-147.compute-1.amazonaws.com]
+ok: [ec2-100-26-165-36.compute-1.amazonaws.com]
+ok: [ec2-54-210-123-120.compute-1.amazonaws.com]
+ok: [ec2-54-173-75-170.compute-1.amazonaws.com]
+ok: [ec2-100-24-206-190.compute-1.amazonaws.com]
+ok: [ec2-100-25-139-89.compute-1.amazonaws.com]
+ok: [ec2-100-25-26-98.compute-1.amazonaws.com]
+ok: [ec2-100-26-236-211.compute-1.amazonaws.com]
+
+TASK [rngd : ensure rng-tools is installed] *************************************************************************************************************************************************
+fatal: [ec2-52-91-122-210.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+fatal: [ec2-100-26-165-36.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+fatal: [ec2-52-204-70-189.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+fatal: [ec2-54-197-117-147.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+fatal: [ec2-54-210-123-120.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+fatal: [ec2-54-173-75-170.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+fatal: [ec2-100-25-26-98.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+fatal: [ec2-100-25-139-89.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+fatal: [ec2-100-24-206-190.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+fatal: [ec2-100-26-236-211.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+
+PLAY [Install Java] *************************************************************************************************************************************************************************
+
+PLAY [Install MariaDB and create databases] *************************************************************************************************************************************************
+
+PLAY [Install MySQL Connector] **************************************************************************************************************************************************************
+
+PLAY [Install MIT KDC Server] ***************************************************************************************************************************************************************
+
+PLAY [Install MIT KDC Client] ***************************************************************************************************************************************************************
+
+PLAY [Configure EPEL Repository] ************************************************************************************************************************************************************
+
+PLAY [Install Cloudera Manager Agents] ******************************************************************************************************************************************************
+
+PLAY [Install Cloudera Manager Server] ******************************************************************************************************************************************************
+
+PLAY [Install CDH] **************************************************************************************************************************************************************************
+
+PLAY RECAP **********************************************************************************************************************************************************************************
+ec2-100-24-206-190.compute-1.amazonaws.com : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-100-25-139-89.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-100-25-166-39.compute-1.amazonaws.com : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-100-25-26-98.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-100-26-165-36.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-100-26-236-211.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-52-204-70-189.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-52-91-122-210.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-54-173-75-170.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-54-197-117-147.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-54-210-123-120.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
