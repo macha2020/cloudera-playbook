@@ -1,7 +1,7 @@
 ---
 
-db_hostname: "{{ hostvars[groups['db_server'][0]]['inventory_hostname'] }}"
-scm_hostname: "{{ hostvars[groups['scm_server'][0]]['inventory_hostname'] }}"
+db_hostname: "{{ hostvars[groups['tag_Role_db_server'][0]]['inventory_hostname'] }}"
+scm_hostname: "{{ hostvars[groups['tag_Role_scm_server'][0]]['inventory_hostname'] }}"
 
 cluster_display_name: cluster_1
 

@@ -1,6 +1,6 @@
 ---
 
-- include_vars: ../../../group_vars/db_server.yml
+- include_vars: ../../../group_vars/tag_Role_db_server.yml
 
 - name: Install the Cloudera Manager Server Packages
   yum:
