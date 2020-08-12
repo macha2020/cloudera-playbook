@@ -3,83 +3,786 @@
 PLAY [Configure Cloudera Manager Repository] ************************************************************************************************************************************************
 
 TASK [Gathering Facts] **********************************************************************************************************************************************************************
-fatal: [ec2-100-25-166-39.compute-1.amazonaws.com]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/libexec/platform-python"}, "failed": true, "module_stderr": "Shared connection to ec2-100-25-166-39.compute-1.amazonaws.com closed.\r\n", "module_stdout": ">>> /etc/sudoers: syntax error near line 121 <<<\r\nsudo: parse error in /etc/sudoers near line 121\r\nsudo: no valid sudoers sources found, quitting\r\nsudo: unable to initialize policy plugin\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: setup\n"}
-ok: [ec2-52-91-122-210.compute-1.amazonaws.com]
-ok: [ec2-54-197-117-147.compute-1.amazonaws.com]
-ok: [ec2-100-26-165-36.compute-1.amazonaws.com]
-ok: [ec2-54-210-123-120.compute-1.amazonaws.com]
-ok: [ec2-52-204-70-189.compute-1.amazonaws.com]
-ok: [ec2-54-173-75-170.compute-1.amazonaws.com]
-ok: [ec2-100-25-26-98.compute-1.amazonaws.com]
-ok: [ec2-100-25-139-89.compute-1.amazonaws.com]
-ok: [ec2-100-24-206-190.compute-1.amazonaws.com]
-ok: [ec2-100-26-236-211.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
 
 TASK [cm_repo : Add Cloudera Manager yum repository] ****************************************************************************************************************************************
-ok: [ec2-52-204-70-189.compute-1.amazonaws.com]
-ok: [ec2-52-91-122-210.compute-1.amazonaws.com]
-ok: [ec2-54-197-117-147.compute-1.amazonaws.com]
-ok: [ec2-100-26-165-36.compute-1.amazonaws.com]
-ok: [ec2-54-210-123-120.compute-1.amazonaws.com]
-ok: [ec2-54-173-75-170.compute-1.amazonaws.com]
-ok: [ec2-100-25-139-89.compute-1.amazonaws.com]
-ok: [ec2-100-25-26-98.compute-1.amazonaws.com]
-changed: [ec2-100-24-206-190.compute-1.amazonaws.com]
-ok: [ec2-100-26-236-211.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
 
 PLAY [Install rngd] *************************************************************************************************************************************************************************
 
 TASK [Gathering Facts] **********************************************************************************************************************************************************************
-ok: [ec2-52-91-122-210.compute-1.amazonaws.com]
-ok: [ec2-52-204-70-189.compute-1.amazonaws.com]
-ok: [ec2-54-197-117-147.compute-1.amazonaws.com]
-ok: [ec2-100-26-165-36.compute-1.amazonaws.com]
-ok: [ec2-54-210-123-120.compute-1.amazonaws.com]
-ok: [ec2-54-173-75-170.compute-1.amazonaws.com]
-ok: [ec2-100-24-206-190.compute-1.amazonaws.com]
-ok: [ec2-100-25-139-89.compute-1.amazonaws.com]
-ok: [ec2-100-25-26-98.compute-1.amazonaws.com]
-ok: [ec2-100-26-236-211.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
 
 TASK [rngd : ensure rng-tools is installed] *************************************************************************************************************************************************
-fatal: [ec2-52-91-122-210.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
-fatal: [ec2-100-26-165-36.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
-fatal: [ec2-52-204-70-189.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
-fatal: [ec2-54-197-117-147.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
-fatal: [ec2-54-210-123-120.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
-fatal: [ec2-54-173-75-170.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
-fatal: [ec2-100-25-26-98.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
-fatal: [ec2-100-25-139-89.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
-fatal: [ec2-100-24-206-190.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
-fatal: [ec2-100-26-236-211.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'cloudera-manager': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [Create rngd configuration file] *******************************************************************************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+
+TASK [ensure rngd is running] ***************************************************************************************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
 
 PLAY [Install Java] *************************************************************************************************************************************************************************
 
+TASK [Gathering Facts] **********************************************************************************************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Copy Java RPM file to temp directory] ******************************************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Install Java from RPM] *********************************************************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Install Java from package repository] ******************************************************************************************************************************************
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+
+TASK [java : Find Java home directory] ******************************************************************************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [Create alternatives symlink for java] *************************************************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Create default symlink for Java home directory] ********************************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Capture installed Java provider] ***********************************************************************************************************************************************
+changed: [ec2-35-175-126-37.compute-1.amazonaws.com]
+changed: [ec2-54-237-216-7.compute-1.amazonaws.com]
+changed: [ec2-100-25-13-103.compute-1.amazonaws.com]
+changed: [ec2-52-91-120-206.compute-1.amazonaws.com]
+changed: [ec2-54-81-118-121.compute-1.amazonaws.com]
+changed: [ec2-54-90-63-65.compute-1.amazonaws.com]
+changed: [ec2-18-207-236-74.compute-1.amazonaws.com]
+changed: [ec2-54-146-66-245.compute-1.amazonaws.com]
+changed: [ec2-35-175-132-228.compute-1.amazonaws.com]
+changed: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Capture installed Java version] ************************************************************************************************************************************************
+changed: [ec2-35-175-126-37.compute-1.amazonaws.com]
+changed: [ec2-54-237-216-7.compute-1.amazonaws.com]
+changed: [ec2-100-25-13-103.compute-1.amazonaws.com]
+changed: [ec2-52-91-120-206.compute-1.amazonaws.com]
+changed: [ec2-54-81-118-121.compute-1.amazonaws.com]
+changed: [ec2-54-90-63-65.compute-1.amazonaws.com]
+changed: [ec2-18-207-236-74.compute-1.amazonaws.com]
+changed: [ec2-54-146-66-245.compute-1.amazonaws.com]
+changed: [ec2-35-175-132-228.compute-1.amazonaws.com]
+changed: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : set_fact] **********************************************************************************************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Enable Unlimited Strength Policy (Oracle JDK7)] ********************************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Enable Unlimited Strength Policy (Oracle JDK8 before u151)] ********************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Enable Unlimited Strength Policy (Oracle JDK8 after u151)] *********************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [java : Enable Unlimited Strength Policy (OpenJDK)] ************************************************************************************************************************************
+included: /home/cloud_user/final-1/cloudera-playbook/roles/java/tasks/install_jce_from_config.yml for ec2-35-175-126-37.compute-1.amazonaws.com, ec2-54-237-216-7.compute-1.amazonaws.com, ec2-100-25-13-103.compute-1.amazonaws.com, ec2-52-91-120-206.compute-1.amazonaws.com, ec2-54-81-118-121.compute-1.amazonaws.com, ec2-54-90-63-65.compute-1.amazonaws.com, ec2-18-207-236-74.compute-1.amazonaws.com, ec2-54-146-66-245.compute-1.amazonaws.com, ec2-35-175-132-228.compute-1.amazonaws.com, ec2-52-23-178-229.compute-1.amazonaws.com
+
+TASK [java : lineinfile] ********************************************************************************************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+
+TASK [java : Apply workaround for Kerberos issues introduced in OpenJDK 1.8u242 (JDK-8215032)] **********************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+
 PLAY [Install MariaDB and create databases] *************************************************************************************************************************************************
+
+TASK [Gathering Facts] **********************************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+
+TASK [mariadb : Install MariaDB packages] ***************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+
+TASK [mariadb : Create MariaDB configuration file] ******************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+
+TASK [mariadb : Create MariaDB log file] ****************************************************************************************************************************************************
+changed: [ec2-54-81-118-121.compute-1.amazonaws.com]
+
+TASK [mariadb : Create MariaDB PID directory] ***********************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+
+TASK [mariadb : Start MariaDB Service] ******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+
+TASK [mariadb : Set root password] **********************************************************************************************************************************************************
+[WARNING]: Module did not set no_log for update_password
+fatal: [ec2-54-81-118-121.compute-1.amazonaws.com]: FAILED! => {"changed": false, "msg": "unable to connect to database, check login_user and login_password are correct or /root/.my.cnf has the credentials. Exception message: (1045, \"Access denied for user 'root'@'localhost' (using password: NO)\")"}
+...ignoring
+
+TASK [mariadb : Remove anonymous users] *****************************************************************************************************************************************************
+changed: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item=DELETE FROM mysql.user WHERE User='')
+
+TASK [mariadb : Disable remote login for root] **********************************************************************************************************************************************
+changed: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item=DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('127.0.0.1', '::1', 'localhost'))
+
+TASK [mariadb : Remove the test database] ***************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+
+TASK [mariadb : Reload privilege tables] ****************************************************************************************************************************************************
+changed: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item=FLUSH PRIVILEGES)
+
+TASK [mariadb : Create databases] ***********************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'scm', u'value': {u'type': u'mysql', u'user': u'scm', u'name': u'scm', u'pass': u'scm_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'hue', u'value': {u'type': u'mysql', u'user': u'hue', u'name': u'hue', u'pass': u'hue_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'sentry', u'value': {u'type': u'mysql', u'user': u'sentry', u'name': u'sentry', u'pass': u'sentry_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'amon', u'value': {u'type': u'mysql', u'user': u'amon', u'name': u'amon', u'pass': u'amon_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'das', u'value': {u'type': u'mysql', u'user': u'das', u'name': u'das', u'pass': u'das_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'navms', u'value': {u'type': u'mysql', u'user': u'navms', u'name': u'navms', u'pass': u'navms_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'ranger', u'value': {u'type': u'mysql', u'user': u'ranger', u'name': u'ranger', u'pass': u'ranger_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'metastore', u'value': {u'type': u'mysql', u'user': u'hive', u'name': u'metastore', u'pass': u'hive_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'nav', u'value': {u'type': u'mysql', u'user': u'nav', u'name': u'nav', u'pass': u'nav_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'oozie', u'value': {u'type': u'mysql', u'user': u'oozie', u'name': u'oozie', u'pass': u'oozie_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'rman', u'value': {u'type': u'mysql', u'user': u'rman', u'name': u'rman', u'pass': u'rman_password'}})
+
+TASK [mariadb : Create database users] ******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'scm', u'value': {u'type': u'mysql', u'user': u'scm', u'name': u'scm', u'pass': u'scm_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'hue', u'value': {u'type': u'mysql', u'user': u'hue', u'name': u'hue', u'pass': u'hue_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'sentry', u'value': {u'type': u'mysql', u'user': u'sentry', u'name': u'sentry', u'pass': u'sentry_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'amon', u'value': {u'type': u'mysql', u'user': u'amon', u'name': u'amon', u'pass': u'amon_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'das', u'value': {u'type': u'mysql', u'user': u'das', u'name': u'das', u'pass': u'das_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'navms', u'value': {u'type': u'mysql', u'user': u'navms', u'name': u'navms', u'pass': u'navms_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'ranger', u'value': {u'type': u'mysql', u'user': u'ranger', u'name': u'ranger', u'pass': u'ranger_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'metastore', u'value': {u'type': u'mysql', u'user': u'hive', u'name': u'metastore', u'pass': u'hive_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'nav', u'value': {u'type': u'mysql', u'user': u'nav', u'name': u'nav', u'pass': u'nav_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'oozie', u'value': {u'type': u'mysql', u'user': u'oozie', u'name': u'oozie', u'pass': u'oozie_password'}})
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com] => (item={u'key': u'rman', u'value': {u'type': u'mysql', u'user': u'rman', u'name': u'rman', u'pass': u'rman_password'}})
 
 PLAY [Install MySQL Connector] **************************************************************************************************************************************************************
 
+TASK [Gathering Facts] **********************************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [mysql_connector : Create /usr/share/java directory] ***********************************************************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [mysql_connector : Install unzip package] **********************************************************************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [mysql_connector : stat] ***************************************************************************************************************************************************************
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [mysql_connector : Download MySQL Connector/J] *****************************************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [mysql_connector : Extract MySQL Connector/J zip file] *********************************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [mysql_connector : Copy MySQL Connector/J jar file to correct location] ****************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
 PLAY [Install MIT KDC Server] ***************************************************************************************************************************************************************
+
+TASK [Gathering Facts] **********************************************************************************************************************************************************************
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+
+TASK [krb5/server : Install KRB5 server] ****************************************************************************************************************************************************
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+
+TASK [krb5/server : Set kdc.conf] ***********************************************************************************************************************************************************
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+
+TASK [krb5/server : Set krb5.conf] **********************************************************************************************************************************************************
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+
+TASK [krb5/server : Create KDC database] ****************************************************************************************************************************************************
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+
+TASK [krb5/server : Set kadm5.acl] **********************************************************************************************************************************************************
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+
+TASK [krb5/server : Create Cloudera Manager admin principal] ********************************************************************************************************************************
+changed: [ec2-18-207-236-74.compute-1.amazonaws.com]
+
+TASK [krb5/server : Start Kerberos] *********************************************************************************************************************************************************
+changed: [ec2-18-207-236-74.compute-1.amazonaws.com] => (item=krb5kdc)
+changed: [ec2-18-207-236-74.compute-1.amazonaws.com] => (item=kadmin)
 
 PLAY [Install MIT KDC Client] ***************************************************************************************************************************************************************
 
+TASK [Gathering Facts] **********************************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [krb5/client : install krb5] ***********************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [krb5/client : copy krb5.conf] *********************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+[WARNING]: Could not match supplied host pattern, ignoring: tag_role_scm_server
+
 PLAY [Configure EPEL Repository] ************************************************************************************************************************************************************
+skipping: no hosts matched
 
 PLAY [Install Cloudera Manager Agents] ******************************************************************************************************************************************************
 
+TASK [Gathering Facts] **********************************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create group 'hadoop'] ****************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'flume'] ******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'hbase'] ******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'hdfs'] *******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'hive'] *******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'httpfs'] *****************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'hue'] ********************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'impala'] *****************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'kafka'] ******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'kms'] ********************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'kudu'] *******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'mapred'] *****************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'oozie'] ******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'sentry'] *****************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'solr'] *******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'spark'] ******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'sqoop'] ******************************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'sqoop2'] *****************************************************************************************************************************************************
+skipping: [ec2-35-175-126-37.compute-1.amazonaws.com]
+skipping: [ec2-54-237-216-7.compute-1.amazonaws.com]
+skipping: [ec2-100-25-13-103.compute-1.amazonaws.com]
+skipping: [ec2-52-91-120-206.compute-1.amazonaws.com]
+skipping: [ec2-54-81-118-121.compute-1.amazonaws.com]
+skipping: [ec2-54-90-63-65.compute-1.amazonaws.com]
+skipping: [ec2-18-207-236-74.compute-1.amazonaws.com]
+skipping: [ec2-54-146-66-245.compute-1.amazonaws.com]
+skipping: [ec2-35-175-132-228.compute-1.amazonaws.com]
+skipping: [ec2-52-23-178-229.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'yarn'] *******************************************************************************************************************************************************
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+
+TASK [cm_agents : Create user 'zookeeper'] **************************************************************************************************************************************************
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+
+TASK [cm_agents : Install Cloudera Manager Agents] ******************************************************************************************************************************************
+ok: [ec2-54-81-118-121.compute-1.amazonaws.com]
+ok: [ec2-52-91-120-206.compute-1.amazonaws.com]
+ok: [ec2-54-237-216-7.compute-1.amazonaws.com]
+ok: [ec2-35-175-126-37.compute-1.amazonaws.com]
+ok: [ec2-100-25-13-103.compute-1.amazonaws.com]
+ok: [ec2-54-90-63-65.compute-1.amazonaws.com]
+ok: [ec2-18-207-236-74.compute-1.amazonaws.com]
+ok: [ec2-54-146-66-245.compute-1.amazonaws.com]
+ok: [ec2-52-23-178-229.compute-1.amazonaws.com]
+ok: [ec2-35-175-132-228.compute-1.amazonaws.com]
+
+TASK [cm_agents : Configure Cloudera Manager Agent 'server_host'] ***************************************************************************************************************************
+changed: [ec2-52-91-120-206.compute-1.amazonaws.com]
+changed: [ec2-54-81-118-121.compute-1.amazonaws.com]
+changed: [ec2-54-237-216-7.compute-1.amazonaws.com]
+changed: [ec2-35-175-126-37.compute-1.amazonaws.com]
+changed: [ec2-100-25-13-103.compute-1.amazonaws.com]
+changed: [ec2-54-90-63-65.compute-1.amazonaws.com]
+changed: [ec2-18-207-236-74.compute-1.amazonaws.com]
+changed: [ec2-52-23-178-229.compute-1.amazonaws.com]
+changed: [ec2-54-146-66-245.compute-1.amazonaws.com]
+changed: [ec2-35-175-132-228.compute-1.amazonaws.com]
+
+TASK [cm_agents : Restart Cloudera Manager Agents] ******************************************************************************************************************************************
+changed: [ec2-52-91-120-206.compute-1.amazonaws.com]
+changed: [ec2-54-81-118-121.compute-1.amazonaws.com]
+changed: [ec2-54-237-216-7.compute-1.amazonaws.com]
+changed: [ec2-35-175-126-37.compute-1.amazonaws.com]
+changed: [ec2-100-25-13-103.compute-1.amazonaws.com]
+changed: [ec2-54-90-63-65.compute-1.amazonaws.com]
+changed: [ec2-18-207-236-74.compute-1.amazonaws.com]
+changed: [ec2-52-23-178-229.compute-1.amazonaws.com]
+changed: [ec2-54-146-66-245.compute-1.amazonaws.com]
+changed: [ec2-35-175-132-228.compute-1.amazonaws.com]
+
 PLAY [Install Cloudera Manager Server] ******************************************************************************************************************************************************
+skipping: no hosts matched
 
 PLAY [Install CDH] **************************************************************************************************************************************************************************
+skipping: no hosts matched
 
 PLAY RECAP **********************************************************************************************************************************************************************************
-ec2-100-24-206-190.compute-1.amazonaws.com : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-100-25-139-89.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-100-25-166-39.compute-1.amazonaws.com : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-100-25-26-98.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-100-26-165-36.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-100-26-236-211.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-52-204-70-189.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-52-91-122-210.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-54-173-75-170.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-54-197-117-147.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
-ec2-54-210-123-120.compute-1.amazonaws.com : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+ec2-100-25-13-103.compute-1.amazonaws.com : ok=45   changed=4    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0
+ec2-18-207-236-74.compute-1.amazonaws.com : ok=53   changed=6    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0
+ec2-35-175-126-37.compute-1.amazonaws.com : ok=45   changed=4    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0
+ec2-35-175-132-228.compute-1.amazonaws.com : ok=45   changed=4    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0
+ec2-52-23-178-229.compute-1.amazonaws.com : ok=45   changed=4    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0
+ec2-52-91-120-206.compute-1.amazonaws.com : ok=45   changed=4    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0
+ec2-54-146-66-245.compute-1.amazonaws.com : ok=45   changed=4    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0
+ec2-54-237-216-7.compute-1.amazonaws.com : ok=45   changed=4    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0
+ec2-54-81-118-121.compute-1.amazonaws.com : ok=58   changed=8    unreachable=0    failed=0    skipped=11   rescued=0    ignored=1
+ec2-54-90-63-65.compute-1.amazonaws.com : ok=45   changed=4    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0
