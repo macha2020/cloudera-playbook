@@ -1,10 +1,10 @@
-aws cloudformation delete-stack cdh1
-aws cloudformation delete-stack cdh2
-aws cloudformation delete-stack cdh3
-aws cloudformation delete-stack cdh4
-aws cloudformation delete-stack cdh5
-aws cloudformation delete-stack cdh6
-aws cloudformation delete-stack cdh7
-aws cloudformation delete-stack cdh8
-aws cloudformation delete-stack cdh9
-aws cloudformation delete-stack cdh10
+aws cloudformation delete-stack --stack-name cdh1
+aws cloudformation delete-stack --stack-name cdh2
+aws cloudformation delete-stack --stack-name cdh3
+aws cloudformation delete-stack --stack-name cdh4
+aws cloudformation delete-stack --stack-name cdh5
+aws cloudformation delete-stack --stack-name cdh6
+aws cloudformation delete-stack --stack-name cdh7
+aws cloudformation delete-stack --stack-name cdh8
+aws cloudformation delete-stack --stack-name cdh9
+aws cloudformation delete-stack --stack-name cdh10

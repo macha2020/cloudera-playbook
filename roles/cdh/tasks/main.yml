@@ -1,6 +1,6 @@
 ---
 
-- include_vars: ../../../group_vars/tag_Role_cdh_servers.yml
+- include_vars: ../../../group_vars/tag_main_group_cdh_servers.yml
 - include_vars: ../../../group_vars/tag_Role_db_server.yml
 
 # Check whether cluster already exists

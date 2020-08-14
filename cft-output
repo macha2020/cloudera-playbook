@@ -1,4 +1,0 @@
-[cloud_user@mrciti7c cloudera-playbook]$ aws cloudformation create-stack --stack-name cdh-setup --template-body file://aws-ec2-cdh-nodes-provisioning.yaml --parameters ParameterKey=AMIID,ParameterValue=ami-098f16afa9edf40be ParameterKey=Role,ParameterValue=db_server ParameterKey=KeyName,ParameterValue=key-pair
-{
-    "StackId": "arn:aws:cloudformation:us-east-1:979945049799:stack/cdh-setup/4dd52d70-db04-11ea-9462-0addedaaaadd"
-

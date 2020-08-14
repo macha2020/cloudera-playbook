@@ -50,7 +50,7 @@
     - krb5_client
 
 - name: Configure EPEL Repository
-  hosts: tag_role_scm_server
+  hosts: tag_Role_scm_server
   roles:
     - epel
   tags: epel
@@ -62,13 +62,13 @@
   tags: cm_agents
 
 - name: Install Cloudera Manager Server
-  hosts: tag_role_scm_server
+  hosts: tag_Role_scm_server
   roles:
     - scm
   tags: cluster_template
 
 - name: Install CDH
-  hosts: tag_role_scm_server
+  hosts: tag_Role_scm_server
   roles:
     - cdh
   tags: cluster_template
